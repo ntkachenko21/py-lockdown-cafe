@@ -6,7 +6,7 @@ def go_to_cafe(friends: list[dict], cafe: Cafe) -> str:
     count = 0
     for client in friends:
         try:
-            Cafe.visit_cafe(cafe, client)
+            cafe.visit_cafe(client)
         except VaccineError:
             return "All friends should be vaccinated"
         except NotWearingMaskError:
